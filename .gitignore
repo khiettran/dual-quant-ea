@@ -1,0 +1,6 @@
+# MetaTrader 5 compiled files & logs
+*.ex5
+*.log
+*.dat
+*.hc
+tester/
