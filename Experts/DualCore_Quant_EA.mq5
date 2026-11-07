@@ -23,7 +23,7 @@ enum ENUM_BREAKOUT_EXEC
 //| INPUT PARAMETERS                                                 |
 //+------------------------------------------------------------------+
 input group "=== 1. CHON LOI CHIEN LUOC (DUAL-CORE SWITCH) ==="
-input bool                 InpEnableCore1_TurtleSoup = true;              // Bat Core 1: False Breakout / Turtle Soup (Tot cho EURUSD & XAUUSD)
+input bool                 InpEnableCore1_TurtleSoup = false;              // Bat Core 1: False Breakout / Turtle Soup (Tot cho EURUSD & XAUUSD)
 input bool                 InpEnableCore2_SwingBreak = true;              // Bat Core 2: Swing Breakout R:R 1:3 (Tot cho XAUUSD H1)
 input bool                 InpUseBodyForRange        = false;             // Dung Than nen (Open/Close) thay Rau nen (High/Low) de dong bo giua cac san
 input ulong                InpMagicCore1             = 202601;            // Magic Number Core 1
@@ -66,10 +66,10 @@ input int                  InpCore2_PendingExpireBars= 6;                 // So 
 input int                  InpCore2_MaxHoldBars      = 36;                // Time Exit: Tu dong dong lenh sau N nen (0 = tat)
 
 input group "=== 6. QUAN LY LENH DONG (BREAKEVEN & TRAILING STOP) ==="
-input bool                 InpUseBreakeven           = true;              // Tu dong doi SL ve Hoa von (Breakeven)
+input bool                 InpUseBreakeven           = false;              // Tu dong doi SL ve Hoa von (Breakeven)
 input double               InpBreakevenTriggerR      = 1.0;               // Kich hoat Breakeven khi lai dat X * R (1.0R)
 input double               InpBreakevenLockATR       = 0.10;              // Khoa lai nho khi doi Breakeven (x ATR)
-input bool                 InpUseTrailingStop        = true;              // Bat Trailing Stop theo ATR
+input bool                 InpUseTrailingStop        = false;              // Bat Trailing Stop theo ATR
 input double               InpTrailingStartR         = 1.5;               // Kich hoat Trailing khi lai dat X * R
 input double               InpTrailingStepATR        = 1.2;               // Khoang cach truot Trailing Stop (x ATR)
 
